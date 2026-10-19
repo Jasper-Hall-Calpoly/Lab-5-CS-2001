@@ -2,19 +2,17 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     // add six to a number
-    public static int addSix(int a){
-        return a + 6;
+    static public AStack emptyStack(){
+        return new AStack(null, 0);
+    }
+
+    static public circularQueue emptyQueue(int size){
+        String[] queue = {};
+        return new circularQueue( queue, size);
     }
 
     static void main(String[] args) {
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
-        IO.println(String.format("Hello and welcome!"));
-
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            IO.println("i = " + Main.addSix(i));
-        }
     }
 }
